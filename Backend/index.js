@@ -25,13 +25,6 @@ app.use("/api/user", userRouter);
 app.use("/api/image", imageRouter);
 
 app.use("/api/*", notFoundHandler);
-const frontendPath = path.resolve(__dirname, '..', 'Frontend', 'build');
-app.use(express.static(frontendPath));
-
-// Handle all other routes by serving the index.html file
-app.get('*', (req, res) => {
-  res.sendFile(path.join(frontendPath, 'index.html'));
-});
 
 app.use(errorHandler);
 
