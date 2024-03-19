@@ -1,0 +1,16 @@
+{
+  "name": "assingment-1",
+  "version": "1.0.0",
+  "description": "Assingment Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node Backend/index.js",
+    "server": "nodemon Backend/index.js",
+    "client": "npm start --prefix Frontend",
+    "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Abhishek Mishra",
+  "license": "ISC"
+}
